@@ -1,0 +1,22 @@
+.sliding-prompt{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: red;
+
+  animation-name: example;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  text-align: center;
+}
+
+@keyframes example {
+  from {
+    top: 0px;
+    background-color: yellow;
+  }
+  to {
+    top: 130px;
+  }
+}

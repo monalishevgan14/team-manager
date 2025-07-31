@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="w-100" style="max-width: 400px;">
+    <h2 class="text-center">Login</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="onSignup()">
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="username" formControlName="username" />
+            <div class="text-danger" *ngIf="username?.invalid && username?.touched">
+                <!-- <span *ngIf="username?.hasError('requird')">Username Is Requird</span> -->
+                <span *ngIf="username?.errors?.['required']">Username is required</span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Password" formControlName="password" />
+            <div class="text-danger" *ngIf="password?.invalid && password?.touched">
+                <span *ngIf="password?.hasError('required')">Password is required</span>
+                <span *ngIf="password?.hasError('minlength')">
+                    Password must be at least 6 characters
+                </span>
+            </div>
+        </div>
+        <button class="btn btn-primary w-100">Sign Up</button>
+    </form>
+</div>
+</div>

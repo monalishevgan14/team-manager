@@ -1,0 +1,16 @@
+<div *ngIf="username; else showLoginPrompt">
+    <div class="container mt-5">
+        <h2>Welcome, {{ username }}</h2>
+        <button class="btn btn-danger" (click)="onLogout()">Logout</button>
+    </div>
+</div>
+
+<ng-template #showLoginPrompt>
+    <div class=" placeholder-glow sliding-prompt mx-auto my-3">
+       Please log in to access this content.
+    </div>
+</ng-template>
+
+<!-- <div *ngIf="showPrompt" class="animatin-div">
+  Please log in to access this content.
+</div> -->
